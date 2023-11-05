@@ -1,0 +1,131 @@
+
+.projects {
+    margin-bottom: 1rem;
+}
+
+.projects .cabecalho {
+    text-align: center;
+}
+
+.projects .cabecalho h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.projects .cabecalho p {
+    color: var(--secondary-text);
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 1rem;
+}
+
+.card {
+    max-width: 350px;
+    background: var(--text-color);
+    color: #fff;
+    padding: 0 1rem 1rem 1rem;
+
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 5px;
+}
+
+.apple-circle {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    padding: 1rem 0 1rem 0;
+    justify-content: start;
+}
+
+.apple-circle span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.content h2 {
+    font-size: 1.4rem;
+    color: #ececec;
+}
+
+.content p {
+    color: rgb(201 201 202);
+}
+
+.live-project img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.tecnologies {
+    margin-top: 0.2rem;
+
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.tecnologies svg {
+    cursor: pointer;
+}
+
+.projects .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.projects .buttons button {
+    width: 100%;
+    padding: .8rem 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    /* BORDA GRADIENTE */
+    border: 2px solid transparent; 
+    border-image: linear-gradient(to right, #ff00a9, #00eaff);
+    border-image-slice: 1;
+
+    background-color: var(--text-color);
+    cursor: pointer;
+}
+
+.projects .buttons a {
+    color: #fff;
+    font-weight: 500;
+}
+
+.projects .buttons svg {
+    color: #fff;
+}

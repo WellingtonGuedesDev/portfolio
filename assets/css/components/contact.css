@@ -1,0 +1,51 @@
+.contact {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+
+.contact .cabecalho {
+    text-align: center;
+    padding: 0 1rem 0 1rem;
+}
+
+.contact .cabecalho h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.contact .cabecalho p {
+    color: var(--secondary-text);
+}
+
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.contact-icons a {
+    position: relative;
+    width: 100%;
+    padding: 0.8rem;
+    color: var(--text-color);
+    border: 2px solid #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: border .5s ease-out;
+}
+
+.contact a svg {
+    position: absolute;
+    left: 1rem;
+}
+
+.contact a:hover {
+    border: 2px solid transparent; 
+    border-image: linear-gradient(to right, #ff00a9, #00eaff);
+    border-image-slice: 1;
+}

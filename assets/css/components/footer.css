@@ -1,0 +1,29 @@
+footer {
+    background: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #fff;
+    padding: 1rem 0 1rem .2rem ;
+}
+
+footer h2 {
+    text-align: center;
+}
+
+footer nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    
+}
+
+footer nav a {
+    color: #fff;
+}
+
+footer span {
+    display: inline-block;
+    text-align: center;
+    color: var(--secondary-text);
+}

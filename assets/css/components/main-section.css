@@ -1,0 +1,238 @@
+:root {
+    --primary-gradient: linear-gradient(90deg, rgba(255,229,59,1) 0%, rgba(255,37,37,1) 100%);
+    --secondary-gradient: linear-gradient(350deg, rgba(252,0,122,1) 0%, rgba(0,225,253,1) 100%);
+    --third-gradient: linear-gradient(345deg, rgba(178,150,255,1) 0%, rgba(255, 203, 255, 0.578) 100%);
+
+    --text-color: rgb(30, 41, 59);
+    --secondary-text: rgb(113, 113, 122);
+
+    --button-color: #000;
+}
+
+header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: var(--secondary-gradient);
+}
+
+.nav .list-items {
+    display: flex;
+    gap: 1rem;
+    font-weight: 500;
+    display: none;
+}
+
+.menu-burger svg {
+    margin-right: 1rem;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+}
+
+
+/* MAIN CONTENT */
+
+main {
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-section {
+    height: calc(100vh);
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    color: rgb(30 41 59/1);
+}
+
+.first-section h2 {
+    font-size: 3rem;
+    margin-top: -4rem;
+    font-weight: 600;
+}
+
+.first-section h2 span {
+    font-size: 4rem;
+    font-weight: bold;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: var(--secondary-gradient);
+}
+
+.first-section p {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.first-section .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.first-section .buttons button {
+    padding: .8rem 3rem;
+    margin-top: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    /* BORDA GRADIENTE */
+    border: 2px solid transparent; 
+    border-image: linear-gradient(to right, #ff00a9, #00eaff);
+    border-image-slice: 1;
+
+    background-color: var(--text-color);
+    cursor: pointer;
+}
+
+.first-section .buttons a {
+    color: #fff;
+    font-weight: 500;
+}
+
+.first-section .buttons svg {
+    color: #fff;
+}
+
+.first-section .next-session {
+    position: absolute;
+    bottom: 7rem;
+    cursor: pointer;
+}
+
+.first-section .next-session svg {
+    width: 20px;
+    height: 20px;
+
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: bounce-1;
+    animation-timing-function: linear;
+}
+
+
+/* MENU HAMBURGER */
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 110%;
+    width: 90%;
+    height: 100vh;
+    background-color: #e5e5e59e;
+    flex-direction: column;
+    display: flex;
+
+    background-size: cover;
+    backdrop-filter: blur(20px);
+    box-shadow: -2px 4px 22px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px 4px 22px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 4px 22px 0px rgba(0,0,0,0.75);
+}
+
+.sidebar h1 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.sidebar .navigate {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigate span {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.sidebar ul {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem;
+}
+
+.sidebar ul li {
+    padding: .6rem 0 .6rem .9rem;
+    border-radius: 5px;
+    background-color: hsla(0,0%,100%,.5);
+    cursor: pointer;
+}
+
+.sidebar ul li a {
+    color: var(--text-color);
+}
+
+.sidebar .close_menu-hamburger {
+    display: inline-block;
+    position: absolute;
+    bottom: 5rem;
+    color: #000;
+    font-size: 2rem;
+    left: 50%;
+    cursor: pointer;
+}
+
+/* OPEN SIDEBAR  */
+.active-sidebar {
+    right: 0%;
+    animation-duration: .5s;
+    animation-name: showSide;
+    animation-timing-function: linear;
+}
+
+
+@keyframes bounce-1 {
+    0%   { transform: translateY(1rem) rotate(90deg); }
+    50%  { transform: translateY(-0.1rem) rotate(90deg); }
+    100% { transform: translateY(1rem) rotate(90deg); }
+}
+
+@keyframes showSide {
+    0%   { left: 110%; }
+    100% { left: 10%; }
+}
+
+@keyframes closeSide {
+    0%   { left: 10%; }
+    100% { left: 110%;
+            display: none;
+        }
+}
+
+
+
+
+
+
